@@ -1,0 +1,528 @@
+<!Doctype html>
+	<head>
+		<title>Happy newyear</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade|Hanalei+Fill" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	</head>
+		<style>
+			body
+			{
+				margin:0;
+				padding:0;
+			}
+			.col-lg-12
+			{
+				background-color:black;
+				height:100vh;
+				width:100%;
+			}
+			.stars
+			{
+				background-color:black;
+				height:100vh;
+				width:100%;
+				background-image:url('images/stars2.gif');
+			}
+			.crackers
+			{
+				background-color:black;
+				height:100vh;
+				width:100%;
+				background-image:url('images/cracker.gif');
+				background-position:center;
+			}
+			.greeting
+			{
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+				display:none;
+				background-image:url('images/stars2.gif');
+				-webkit-box-shadow: 0 0 10px 10px yellow;
+				box-shadow:0 0 10px 10px yellow;
+				border-radius:5px;
+			}
+			.greeting h1
+			{
+				font-size:100px;
+				font-weight:bold;
+				font-family: 'Bungee Shade', cursive;
+				text-shadow:4px 4px 4px transparent;
+				background-image:url("images/textbg.gif");
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				
+			}
+			span
+			{
+				position:relative;
+				top:20%;
+				font-size:300px;
+				transform:translateY(-20%);
+				font-weight:bold;	
+			}
+			.count
+			{
+				color:yellow;
+				text-shadow:4px 4px 4px red;
+			}
+			.image
+			{
+				width:100px;
+				height:100px;
+			}
+			.box
+			{
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+			}
+			@media only screen and (max-width:1357px) {
+				
+				
+				.greeting h1
+					{
+						font-size:98px;
+					}		
+			}
+			@media only screen and (max-width:1357px)
+			{
+				.greeting h1
+				{
+					font-size:95px;
+				}
+			}
+			@media only screen and (max-width:1322px)
+			{
+				.greeting h1
+				{
+					font-size:95px;
+				}
+			}
+			@media only screen and (max-width:1183px)
+			{
+				.greeting h1
+				{
+					font-size:85px;
+				}
+			}
+			@media only screen and (max-width:1059px)
+			{
+				.greeting h1
+				{
+					font-size:75px;
+				}
+				
+			}
+			@media only screen and (max-width:970px)
+			{
+				.greeting h1
+				{
+					font-size:70px;
+				}
+				
+			}
+			@media only screen and (max-width:930px)
+			{
+				.greeting h1
+				{
+					font-size:67px;
+				}
+				span
+				{
+					font-size:250px;
+				}
+			}
+			@media only screen and (max-width:908px)
+			{
+				.greeting h1
+				{
+					font-size:65px;
+				}
+				span
+				{
+					font-size:250px;
+				}
+			}
+			@media only screen and (max-width:908px)
+			{
+				.greeting h1
+				{
+					font-size:65px;
+				}
+				span
+				{
+				
+					font-size:250px;
+				}
+			}
+			@media only screen and (max-width:894px)
+			{
+				.greeting h1
+				{
+					font-size:63px;
+				}
+				span
+				{
+				
+					font-size:250px;
+				}
+				.image
+				{
+					height:100px;
+					width:100px;
+				}
+			}
+			@media only screen and (max-width:876px)
+			{
+				.greeting h1
+				{
+					font-size:64px;
+				}
+				span
+				{
+				
+					font-size:200px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:796px)
+			{
+				.greeting h1
+				{
+					font-size:60px;
+				}
+				span
+				{
+				
+					font-size:200px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:746px)
+			{
+				.greeting h1
+				{
+					font-size:55px;
+				}
+				span
+				{
+					font-size:200px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:684px)
+			{
+				.greeting h1
+				{
+					font-size:50px;
+				}
+				span
+				{
+					font-size:200px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:625px)
+			{
+				.greeting h1
+				{
+					font-size:45px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:560px)
+			{
+				.greeting h1
+				{
+					font-size:40px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:502px)
+			{
+				.greeting h1
+				{
+					font-size:38px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:487px)
+			{
+				.greeting h1
+				{
+					font-size:35px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:465px)
+			{
+				.greeting h1
+				{
+					font-size:33px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:50px;
+					width:50px;
+				}
+			}
+			@media only screen and (max-width:450px)
+			{
+				.greeting h1
+				{
+					font-size:32px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:40px;
+					width:40px;
+				}
+			}
+			@media only screen and (max-width:402px)
+			{
+				.greeting h1
+				{
+					font-size:30px;
+				}
+				span
+				{
+					top:19%;
+					font-size:170px;
+				}
+				.image
+				{
+					height:40px;
+					width:40px;
+				}
+			}
+			@media only screen and (max-width:386px)
+			{
+				.greeting h1
+				{
+					font-size:28px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:40px;
+					width:40px;
+				}
+			}
+			@media only screen and (max-width:372px)
+			{
+				.greeting h1
+				{
+					font-size:28px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:35px;
+					width:35px;
+				}
+			}
+			@media only screen and (max-width:352px)
+			{
+				.greeting h1
+				{
+					font-size:25px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:35px;
+					width:35px;
+				}
+			}
+			@media only screen and (max-width:328px)
+			{
+				.greeting h1
+				{
+					font-size:25px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:30px;
+					width:30px;
+				}
+			}
+			@media only screen and (max-width:310px)
+			{
+				.greeting h1
+				{
+					font-size:22px;
+				}
+				span
+				{
+					font-size:170px;
+				}
+				.image
+				{
+					height:30px;
+					width:30px;
+				}
+			}
+			@media only screen and (max-width:286px)
+			{
+				.greeting h1
+				{
+					font-size:22px;
+				}
+				span
+				{
+					font-size:150px;
+				}
+				.image
+				{
+					height:28px;
+					width:28px;
+				}
+			}
+			@media only screen and (max-width:278px)
+			{
+				.greeting h1
+				{
+					font-size:20px;
+				}
+				span
+				{
+					font-size:150px;
+				}
+				.image
+				{
+					height:28px;
+					width:28px;
+				}
+			}
+			@media only screen and (max-width:262px)
+			{
+				.greeting h1
+				{
+					font-size:20px;
+				}
+				span
+				{
+					font-size:130px;
+				}
+				.image
+				{
+					height:24px;
+					width:24px;
+				}
+			}
+		</style>
+	<body>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 stars text-center">
+						<div class="box">
+						<span class="count text-center"></span>
+						</div>
+						<div class="greeting">
+							<h1>HAPPY NEW YEAR<img src="images/baloon.gif" class="image">&nbsp2019&nbsp<img src="images/baloon.gif" class="image"></h1>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$(document).ready(function (){
+                 var count = 10;
+				 var background =$('.col-lg-12')
+                function myCount() {
+                if (count < 0) {
+                    count = 0;
+                }
+                $('.count').text(count);
+                count --;
+				if(count == 0){
+					$('.count').hide(700);
+					$('.greeting').show(3000);
+					background.removeClass('stars');
+					background.addClass('crackers');
+				};
+                 
+            };
+			
+			
+        setInterval(myCount,1000);
+        });
+		
+			
+		</script>
+	</body>
+</html>
